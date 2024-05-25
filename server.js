@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 4000;
 require("dotenv").config();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.get("/",(req,res)=>{res.send("Hello World");});
 app.get("/giveCredientials", function (req, res) {
   res.send({
     authDomain: process.env.AUTH_DOMAIN,
